@@ -1,0 +1,1 @@
+SELECT users.name AS 'usuario', COUNT(history.user_id) AS 'qt_de_musicas_ouvidas', ROUND(SUM(musics.sec_duration / 60), 2) AS 'total_minutos' FROM SpotifyClone.users AS users INNER JOIN SpotifyClone.user_history AS history ON users.user_id = history.user_id INNER JOIN SpotifyClone.musics AS musics ON history.music_id = musics.music_id GROUP BY users.name ORDER BY users.name;
