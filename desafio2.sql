@@ -1,0 +1,1 @@
+SELECT COUNT(DISTINCT musics.name) AS 'cancoes', COUNT(DISTINCT artist.name) AS 'artistas', COUNT(DISTINCT albuns.name) AS 'albuns' FROM SpotifyClone.albuns AS albuns INNER JOIN SpotifyClone.musics AS musics ON albuns.album_id = musics.album_id INNER JOIN SpotifyClone.artist AS artist ON albuns.artist_id = artist.artist_id;
