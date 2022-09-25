@@ -1,0 +1,1 @@
+SELECT users.name AS 'usuario', IF(MAX(YEAR(history.playback_date)) >= 2021, 'Usuário ativo', 'Usuário inativo') AS 'status_usuario' FROM SpotifyClone.user_history AS history INNER JOIN SpotifyClone.users AS users ON users.user_id = history.user_id GROUP BY users.name ORDER BY users.name
